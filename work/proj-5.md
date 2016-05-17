@@ -1,5 +1,7 @@
 ---
-title: Fresh It Up
+title: Vector Illustration
 ---
 
-![Fresh It Up](assets/img/work/proj-5/freshitup-JieyuXiong.jpg)
+![Vect](assets/img/work/proj-5/img1.jpg)
+![Vect](assets/img/work/proj-5/img2.png)
+

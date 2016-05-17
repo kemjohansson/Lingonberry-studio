@@ -1,5 +1,5 @@
 ---
-title: Crispy Icons
+title: Playdate- It's time to play
 ---
 
-![Crispy Icons](assets/img/work/proj-3/CrispyIcons-PetrasNargela.jpg)
+![Playdate App](assets/img/work/proj-3/Playdate-web.jpg)

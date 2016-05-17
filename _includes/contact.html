@@ -1,6 +1,6 @@
 <section class="section-contact">
 
-  <h3 id="contact">Contact</h3>
+  <h3 id="contact">Let's stay in touch</h3>
 
 
   <div class="social-links">
@@ -11,6 +11,25 @@
 
   <hr class="bar">
 
-  <a class="biglink" href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a>
+<form method="POST" action="//formspree.io/{{ site.data.settings.email }}">
+
+  <fieldset class="contact-info-group">
+
+    <label><span>Your Name</span>
+    <input type="text" name="name"></label>
+
+    <label><span>Your Email</span>
+    <input type="email" name="_replyto"></label>
+
+  </fieldset>
+
+  <label><span>Tell me about your project or which planet in our solar system you think we should visit first.</span>
+  <textarea name="message"></textarea></label>
+
+  <fieldset class="submit-wrap">
+    <input type="submit" value="Send">
+  </fieldset>
+
+</form>
 
 </section>
