@@ -8,9 +8,10 @@ email: lina@lingonberrys.com
 # NOTE: The Logo and Background image are defined in the all.sass document.
 
 menu:
-- {name: About Me, url: '#about-me'}
-- {name: Work, url: '#work'}
+- {name: Skills, url: '/index.html#about-me'}
+- {name: Work, url: '/index.html#work'}
 - {name: Contact, url: '#contact'}
+- {name: About, url: '/about/index.html'}
 
 #-------------------------------
 # SEO Section
@@ -33,42 +34,51 @@ seo:
 #google-analytics-ua: UA-XXXXXX-X
 
 #-------------------------------
-# About Section
+# Skills Section
 
 # NOTE: The avatar is defined in the all.sass document.
 
 blurb: >
-  In my ten years as a designer I have wrangled color, and tamed type – even the most stubborn kerning. I have zipped, scored, and mocked. No publication is safe from my style sheets, photo retouching, and prepress skills. No website is impervious to my extraordinary CSS and HTML code. I translate invisible ideas into tangible objects, and frame language into pictures. I am a dreamer, and a doer. I am a designer.
+  In my years as a designer I have wrangled color, and tamed type – even the most stubborn kerning. I have zipped, scored, and mocked. No publication is safe from my style sheets, photo retouching, and prepress skills. No website is impervious to my extraordinary CSS and HTML code. I translate invisible ideas into tangible objects, and frame language into pictures. I am a dreamer, and a doer. I am a designer.
 
 resume: >
   We can also kick it old school if you like and download my <a href="/assets/img/Lina.Johansson.pdf">resume</a>.
 
 skills:
-- {name: UX/UI Design, value: '8'}
+- {name: Visual Design, value: '9'}
+- {name: Creative Direction, value: '8'}
 - {name: Branding, value: '9'}
-- {name: Typography, value: '7'}
-- {name: Web Design, value: '6'}
+- {name: HTML/CSS, value: '5'}
+- {name: UI Design, value: '8'}
+- {name: Prototyping, value: '7'}
 - {name: Print Design, value: '8'}
 - {name: Illustration, value: '9'}
 - {name: Elephant Trivia, value: '10'}
-- {name: Photography, value: '5'}
 
 #-------------------------------
 # Work Section
 
-projects:
-- {name: DreamHost Branding, folder: 'proj-1', file: 'work/proj-1.html'}
+digital:
+- {name: Affiliate Page Case Study, folder: 'proj-14', file: 'work/proj-14.html'}
+- {name: DreamHost Rebrand, folder: 'proj-4', file: 'work/proj-4.html'}
+- {name: DreamHost Cloud Case Study, folder: 'proj-1', file: 'work/proj-1.html'}
 - {name: PlayDate App, folder: 'proj-3', file: 'work/proj-3.html'}
-- {name: Wayward Vintage, folder: 'proj-7', file: 'work/proj-7.html'}
-- {name: Karlstad SFAI-Veckan 2016, folder: 'proj-4', file: 'work/proj-4.html'}
-- {name: Vector Illustration, folder: 'proj-5', file: 'work/proj-5.html'}
-- {name: Traditional Illustration, folder: 'proj-6', file: 'work/proj-6.html'}
-- {name: Reach out & Touch You Tour, folder: 'proj-2', file: 'work/proj-2.html'}
-- {name: 7 Sins of Birthday, folder: 'proj-8', file: 'work/proj-8.html'}
+- {name: Astrology Artist Book, folder: 'proj-9', file: 'work/proj-9.html'}
+- {name: Cartoon Network Annual Report, folder: 'proj-12', file: 'work/proj-12.html'}
+- {name: Birthday Advent Calendar, folder: 'proj-15', file: 'work/proj-15.html'}
+- {name: DIY Foldable Robot, folder: 'proj-16', file: 'work/proj-16.html'}
+
+
+
+print:
+- {name: Cartoon Network Annual Report, folder: 'proj-12', file: 'work/proj-12.html'}
+- {name: Karlstad SFAI-Conference, folder: 'proj-7', file: 'work/proj-7.html'}
 - {name: Astrology Artist Book, folder: 'proj-9', file: 'work/proj-9.html'}
 - {name: Ingrid's Cupboard, folder: 'proj-10', file: 'work/proj-10.html'}
 - {name: The Girl with Dragon Tattoo, folder: 'proj-11', file: 'work/proj-11.html'}
-- {name: Cartoon Network Annual Report, folder: 'proj-12', file: 'work/proj-12.html'}
+- {name: Vector Illustration, folder: 'proj-5', file: 'work/proj-5.html'}
+- {name: Traditional Illustration, folder: 'proj-6', file: 'work/proj-6.html'}
+- {name: Reach out & Touch You Tour, folder: 'proj-2', file: 'work/proj-2.html'}
 
 #-------------------------------
 # Clients Section
@@ -108,3 +118,6 @@ social:
 
 
 # social network icons available: 'twitter' / 'facebook' / 'github' / 'pinterest' 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'dribbble' / 'behance' / 'soundcloud' / 'vine'
+
+bio: 
+  I was born in a tiny town outside of Göteborg Sweden, loving Abba, Volvo and IKEA like most other Swedes.

@@ -10,7 +10,9 @@ $logo-path: '{{ site.data.layout.logo }}'
 $hero-path: '{{ site.data.layout.hero }}'
 $avatar-path: '{{ site.data.layout.avatar }}'
 
-$projects: {% for project in site.data.settings.projects %} "{{ project.folder }}", {% endfor %}
+$digital: {% for project in site.data.settings.digital %} "{{ project.folder }}", {% endfor %}
+$print: {% for project in site.data.settings.print %} "{{ project.folder }}", {% endfor %}
+
 
 //------------------------------------------------
 // Set some colors as sass variables
@@ -26,3 +28,7 @@ $documentBackgroundColor: {{ site.data.layout.documentBackgroundColor }}
 
 @import '2-base/-base-dir'
 @import '3-sections/-sections-dir'
+
+
+//----------
+
