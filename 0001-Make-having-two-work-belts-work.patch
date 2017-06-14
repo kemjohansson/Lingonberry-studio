@@ -1,0 +1,84 @@
+From a0cabe99903a99d86ecd50712e5f467cdeb54d04 Mon Sep 17 00:00:00 2001
+From: Wesley Spikes <wesley.spikes@gmail.com>
+Date: Tue, 13 Jun 2017 11:08:15 -0700
+Subject: [PATCH] Make having two work-belts work
+
+---
+ assets/js/functions.js | 38 +++++++++++++++++++++++---------------
+ index.html             |  2 ++
+ 2 files changed, 25 insertions(+), 15 deletions(-)
+
+diff --git a/assets/js/functions.js b/assets/js/functions.js
+index 633e812..da2432c 100644
+--- a/assets/js/functions.js
++++ b/assets/js/functions.js
+@@ -31,14 +31,18 @@ function workBelt() {
+   $(".trigger").remove();
+   $(".return").remove();
+ 
+-  $('.thumb-container label').click(function() {
+-    $('.work-belt').addClass("slided");
+-    $('.work-container').show();
+-  });
++  $('.section-work').each(function() {
++    var $this_section = $(this); // Section
++
++    $('.thumb-container label', $this_section).click(function() {
++      $('.work-belt', $this_section).addClass("slided");
++      $('.work-container', $this_section).show();
++    });
+ 
+-  $('.work-return').click(function() {
+-    $('.work-belt').removeClass("slided");
+-    $('.work-container').hide(800);
++    $('.work-return', $this_section).click(function() {
++      $('.work-belt', $this_section).removeClass("slided");
++      $('.work-container', $this_section).hide(800);
++    });
+   });
+ 
+ }
+@@ -48,15 +52,19 @@ function  workLoad() {
+ 
+   $.ajaxSetup({ cache: true });
+ 
+-  $('.thumb-container label').click(function() {
+-    var $this = $(this),
+-        newTitle = $this.find('strong').text(),
+-        newFolder = $this.find('.thumb-unit').data('folder'),
+-        spinner = '<div class="loader">Loading...</div>',
+-        newHTML = 'work/'+ newFolder;
++  $('.section-work').each(function() {
++    var $this_section = $(this); // Section
++
++      $('.thumb-container label', $this_section).click(function() {
++        var $this = $(this),
++            newTitle = $this.find('strong').text(),
++            newFolder = $this.find('.thumb-unit').data('folder'),
++            spinner = '<div class="loader">Loading...</div>',
++            newHTML = 'work/'+ newFolder;
+ 
+-    $('.project-load').html(spinner).load(newHTML);
+-    $('.project-title').text(newTitle);
++        $('.project-load', $this_section).html(spinner).load(newHTML);
++        $('.project-title', $this_section).text(newTitle);
++      });
+   });
+ 
+ }
+diff --git a/index.html b/index.html
+index 4258fb4..64ee1bc 100644
+--- a/index.html
++++ b/index.html
+@@ -26,6 +26,8 @@
+ 
+ {% include digital.html %}
+ 
++{% include print.html %}
++
+ {% include contact.html %}
+ 
+ {% include footer.html %}
+-- 
+2.11.0 (Apple Git-81)
+

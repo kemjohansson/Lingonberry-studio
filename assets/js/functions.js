@@ -31,14 +31,18 @@ function workBelt() {
   $(".trigger").remove();
   $(".return").remove();
 
-  $('.thumb-container label').click(function() {
-    $('.work-belt').addClass("slided");
-    $('.work-container').show();
-  });
+  $('.section-work').each(function() {
+    var $this_section = $(this); // Section
 
-  $('.work-return').click(function() {
-    $('.work-belt').removeClass("slided");
-    $('.work-container').hide(800);
+    $('.thumb-container label', $this_section).click(function() {
+      $('.work-belt', $this_section).addClass("slided");
+      $('.work-container', $this_section).show();
+    });
+
+    $('.work-return', $this_section).click(function() {
+      $('.work-belt', $this_section).removeClass("slided");
+      $('.work-container', $this_section).hide(800);
+    });
   });
 
 }
@@ -48,15 +52,19 @@ function  workLoad() {
 
   $.ajaxSetup({ cache: true });
 
-  $('.thumb-container label').click(function() {
-    var $this = $(this),
-        newTitle = $this.find('strong').text(),
-        newFolder = $this.find('.thumb-unit').data('folder'),
-        spinner = '<div class="loader">Loading...</div>',
-        newHTML = 'work/'+ newFolder;
+  $('.section-work').each(function() {
+    var $this_section = $(this); // Section
 
-    $('.project-load').html(spinner).load(newHTML);
-    $('.project-title').text(newTitle);
+      $('.thumb-container label', $this_section).click(function() {
+        var $this = $(this),
+            newTitle = $this.find('strong').text(),
+            newFolder = $this.find('.thumb-unit').data('folder'),
+            spinner = '<div class="loader">Loading...</div>',
+            newHTML = 'work/'+ newFolder;
+
+        $('.project-load', $this_section).html(spinner).load(newHTML);
+        $('.project-title', $this_section).text(newTitle);
+      });
   });
 
 }
